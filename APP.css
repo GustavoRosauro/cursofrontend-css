@@ -1,0 +1,42 @@
+
+p+p{color:red;}
+ #hovercinza:hover{color:gray}
+ .Box-pai{
+   border-top-width: 5px;
+   border-left-width: 2px;
+   border-right-width: 1px;
+   border-top-color:blue;
+   border-left-color: blue;
+   border-right-color: blue;
+   border-bottom-color: blue;
+   border-top-style: solid;
+   border-left-style: dashed;
+   border-right-style: double;
+   border-bottom-style: groove;
+   border-radius: 20px;
+    box-shadow: -5px 5px 20px #191970;
+    width: 500px;
+ }
+
+ div {
+    display: block;
+}
+    .Box-Filho{
+    border: 1px solid green;
+    width: 300px;
+    height: 200px;
+    margin-left: 50px;
+    padding: 30px;
+    box-sizing: border-box;
+    }
+div{
+    display: block;
+}
+.div-line
+{
+    Width:50px;
+    Height: 50px;
+    border:2px solid green;
+    box-sizing: border-box;
+    display:inline-block;
+}
