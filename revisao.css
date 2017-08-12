@@ -1,0 +1,148 @@
+
+*{
+    margin: 0;
+    padding:0;
+}
+.p
+{
+    line-height: 1.5;
+}
+.title{
+    font-family: fantasy;
+    letter-spacing: 20px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 90px;
+}
+.subtitle{
+    font-family: Verdana, sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: 600;
+    font-size: 32px;
+    word-spacing: 15px;
+}
+.content>p:nth-child(2)
+{
+word-spacing: 30px;
+text-transform: capitalize;
+}
+.main
+{
+background-image: url("https://cdn.pixabay.com/photo/2016/12/22/04/28/facebook-1924510_960_720.png");    
+background-color:green;
+border:1px solid blue;
+width:960px;
+margin-left: auto;
+margin-right: auto;
+margin-top:50px;
+min-height: 590px;
+background-position:center center;
+background-attachment: center;
+background-size: 345px;
+background-repeat: no-repeat;
+}
+.body{
+    background-color: #ccc;
+}
+a:link
+{
+    text-decoration: none;
+    color: white;
+}
+a
+{
+border:1px, solid, white;
+color:white;
+}
+a:hover
+{
+    background-color:blue;
+    font-weight: bold;
+    font-size: 22px;
+}
+ul
+{
+   
+    color:blue;
+    font-size:22px;
+    list-style-position: inside;  
+    list-style-type: armenian;
+}
+.menu
+{
+    list-style: none;
+    background-color:orange;
+    width: 152px;
+}
+.menu a,
+.menu:visited,
+.menu:hover,
+.menu:link,
+
+{
+    border:none;
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+
+}
+ul.menu li
+{
+    border: 1px solid black;
+    line-height: 30px;
+     width: 150px;
+     
+}
+ul.menu li+li
+{
+    border-top:none;
+   
+}
+ul.menu ul
+{
+position:absolute;
+left:211px;
+float: left;
+display:block;
+}
+ul.menu li>ul
+{
+display:none;
+}
+ul.menu li:hover>ul
+{
+    display:block;
+    margin-top: -30.5px;
+    color:red;
+    background-color:blue;
+}
+nav ul.mainmenu 
+{
+    list-style: none;
+}
+nav ul.mainmenu li
+{
+display: inline-block;
+border:1px solid blue;
+background-color:blue;
+color:black;
+line-height: 30px;
+padding:3px;
+min-width: 80px;
+text-align: center;
+font-size: 15px;
+font-weight: bold;
+font-family: Verdana, sans-serif
+}
+nav
+{
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+nav ul.mainmenu li+li
+{
+    margin-left: 5px;
+}
+
