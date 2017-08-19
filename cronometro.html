@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <style>
+            *{
+                margin:0%;
+                padding:0%;
+            }
+            body{
+                background-color: #333;
+                color: #fff;
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5px);
+                font-family: Roboto, sans-serif;
+            }
+
+.container{
+   margin: 100px auto;
+    width: 800px;
+    height:600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:250px;
+
+}
+.filho
+{
+    width: 800px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.filho1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;    
+}
+
+.filho1 div + div{
+    margin-left: 15px;
+}
+.btn--large{
+    min-width: 200px;
+    height: 60px;
+    font-size: 28px;
+    line-height:   1.2px;
+    padding: 10px;
+    color: #fff;
+}
+.label-counter
+{
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 600px;
+}
+.value-counter
+{
+text-align: center;
+font-size: 72px;
+font-weight: 300px;
+
+}
+.btn
+{
+    background-color: transparent;
+    border: 3px solid #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+.btn + .btn
+{
+    margin-left: 10px;
+}
+</style>
+        <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+    <div class="container">
+<div class="filho">
+<div class="label-counter">DAY<p class="value-counter" id="txtday">000</p></div>
+<div class="label-counter">HOUR<p class="value-counter" id="txthour">00</p></div>
+<div class="label-counter">MIN<p class="value-counter" id="txtmin">00</p></div>
+<div class="label-counter">SEC<p class="value-counter" id="txtsec">00</p></div>
+</div>    
+    <div class="filho1">
+    <button class="btn btn--large" onclick="start()">Start</button>
+    <button class="btn btn--large" onclick="stop()">Stop</button>
+    </div>
+</div>
+<script>
+        let time = 0;
+        let timer = {
+            sec: 0,
+            min: 0,
+            hour: 0,
+            day: 0
+        }
+        let clock = null;
+
+
+
+
+        function start() {
+            if (clock == null) {
+                clock = setInterval(update, 1000);
+
+            }
+
+        }
+
+        function stop() {
+            if (clock != null) {
+                clearInterval(clock);
+                clock = null;
+                time = 0;
+                updateFields(timer);
+            }
+
+        }
+
+        function increase() {
+            time = time + 1000;
+        }
+
+        function update() {
+            increase();
+            let result = getTimer(time);
+            updateFields(result);
+        }
+
+        function updateFields(timer) {
+            updateField('txtday', timer.day, 3);
+            updateField('txthour', timer.hour, 2);
+            updateField('txtmin', timer.min, 2);
+            updateField('txtsec', timer.sec, 2);
+        }
+         function updateField(id, number, mask) {
+            document.getElementById(id).innerText = format(number, mask);
+        }
+
+        function getTimer(time) {
+            let timer = {
+                sec: (time / 1000) % 60,
+                min: Math.trunc((time / 1000) / 60),
+                hour: Math.trunc((time / 1000) / (60 * 60)),
+                day: Math.trunc((time / 1000) / (60 * 60 * 24))
+            }
+            return timer;
+        }
+
+        function format(number, maskZerokDigitsLength) {
+            let result = '';
+            let value = number.toString();
+            if (value.length >= maskZerokDigitsLength) {
+                return value;
+            } else {
+                let mask = '';
+                for (let index = 0; index < maskZerokDigitsLength; index++) {
+                    mask += '0';
+                }
+                result = mask + value;
+                return result.slice(-maskZerokDigitsLength);
+            }
+
+        }
+    </script>
+    </body>
+</html>
