@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .linha {
+            width: 100%;
+        }
+
+        .linha>div {
+            float: left;
+            height: 150px;
+            border: 1px solid blue;
+        }
+
+        .container {
+            width: 100%;
+
+            border: 1px solid red;
+        }
+
+        .div100 {
+            width: 100%;
+            height: 150px;
+            border: 1px solid blue;
+        }
+
+        .div200 {
+            width: 100%;
+            height: 150px;
+            border: 1px solid blue;
+        }
+
+        .div300 {
+            width: 100%;
+            height: 150px;
+            border: 1px solid blue;
+        }
+
+         @media(min-device-width:1025px) {
+            .div100 {
+                width: 33.33%;
+            }
+            .div200{
+                 width: 50%;
+            }
+            .div300 {
+                width: 33.33%;
+            }
+        }
+
+         @media(max-device-width:1024px) {
+            .div100 {
+                width: 33.33%;
+            }
+            .div200{
+                 width: 50%;
+            }
+            .div300 {
+                width: 100%;
+            }
+        }
+
+        @media(max-device-width:800px) {
+            .div100 {
+                width: 33.33%;
+            }
+            .div200,
+            .div300 {
+                width: 100%;
+            }
+        }
+
+        @media(max-device-width:450px) {
+            .div100,
+            .div200,
+            .div300 {
+                width: 100%;
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="linha">
+            <div class="div100">100</div>
+            <div class="div100">100</div>
+            <div class="div100">100</div>
+        </div>
+
+
+        <div class="linha">
+            <div class="div200">200</div>
+            <div class="div200">200</div>
+        </div>
+
+
+
+        <div class="linha">
+            <div class="div300">300</div>
+            <div class="div300">300</div>
+            <div class="div300">300</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

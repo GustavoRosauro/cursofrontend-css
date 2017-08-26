@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+             * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            .container
+            {
+                width:100%;
+                border: 1px solid green;
+            }
+            .linha
+            {
+                width: 100%;
+            }
+              .linha > div
+               {
+            float: left;
+            height: 150px;
+            border: 1px solid blue;
+        }
+            .div100
+            {
+                width: 100%;
+                height: 150px;
+                border: 1px solid yellow;
+            }
+            .div200
+            {
+                width: 100%;
+                height: 150px;
+                border: 1px solid yellow;
+            }
+            .div300
+            {
+                width: 100%;
+                height: 150px;
+                border: 1px solid yellow;
+            }
+            .div400
+            {
+                width: 100%;
+                height: 150px;
+                border: 1px solid yellow;
+            }
+            .div500
+            {
+                 width: 100%;
+                height: 150px;
+                border: 1px solid yellow;
+            }
+@media(min-device-width:1025px)
+{
+    .div100
+    {
+        width: 100%;
+    }
+    .div200
+    {
+        width: 50%;
+    }
+    .div300,
+    .div500
+    {
+        width: 25%;
+    }
+    .div400
+    
+    {
+        width: 33.33%;
+    }
+}
+    @media(max-device-width:1024px)
+    {
+        .div100
+    {
+        width: 100%;
+    }
+    .div200
+    {
+        width: 50%;
+    }
+    .div300
+    {
+        width: 50%;
+    }
+    .div500
+    {
+        width: 100%;
+    }
+    .div400
+    {
+        width: 33.33%;
+    }
+    }
+    
+    @media(max-device-width:800px)
+    {
+         
+        .div100
+    {
+        width: 100%;
+    }
+    .div200
+    {
+        width: 50%;
+    }
+    .div300,
+       .div500
+    {
+        width: 100%;
+    }
+    .div400,
+    {
+        width: 33.33%;
+    }
+    }
+    @media(max-device-width:450px)
+    {
+        .div100,
+        .div200,
+        .div300,
+        .div400,
+        .div500
+
+        {
+            width:100%;
+        }
+    }
+    
+
+</style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="linha">
+    <div class="div100">1</div>
+    </div>
+<div class="linha">
+    <div class="div200">2</div>
+    <div class="div200">3</div>
+</div>
+        <div class="linha"> 
+    <div class="div300">4</div>
+    <div class="div300">5</div>
+        </div>
+    <div class="linha">
+    <div class="div500">6</div>
+    <div class="div500">7</div>
+        </div>
+    <div class="linha">
+    <div class="div400">8</div>
+    <div class="div400">9</div>
+    <div class="div400">10</div>
+    </div>
+        </div>
+    </body>
+</html>
