@@ -1,0 +1,109 @@
+$corTexto:#fff;
+$corFundo:gray;
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@mixin fontbase
+{
+    font:
+    {
+        size:16px;
+        family:verdana, 'sans-serif';
+    }
+    line-height: 1,3;
+    text-align: left;
+    color:red;
+}
+@mixin paineBase($corTexto, $corFundo)
+{
+    color: $corTexto;
+    background-color:$corFundo;
+}
+
+.titulo-principal
+{
+    font-size: 40px;
+    color: $corTexto;
+    background-color: $corFundo;
+}
+.subtitulo
+{
+    font-size:50px;
+}
+.painel
+{
+    border:1px solid;
+    width:500px;
+    font-weight: 800px;
+
+    &-vermelho
+{
+    @include paineBase(#fff, red);
+    border:1px solid $corFundo;
+    width:500px;
+    .painel-titulo
+    {
+        @include paineBase(#fff, red);
+        color:$corTexto;
+    }
+    .painel-titulo
+    {
+        background-color:orange;
+    }
+}
+    border:1px solid $corFundo;
+    width:500px;
+    .painel-titulo
+    {
+        background-color:$corFundo;
+        color:$corTexto;
+        h3
+        {
+            font-size:24px;
+            &:hover
+            {
+                font-size: 24px;
+                background-color:#fff;
+                color:green;
+            }
+        }
+    }
+.painel-conteudo
+{
+    color:#000;
+    background-color:#fff;
+}
+}
+.painel-verde
+{
+    @include paineBase(#fff, red);
+    border:1px solid $corFundo;
+    width:500px;
+    .painel-titulo
+    {
+      background-color:$corFundo;
+        color:$corTexto;
+        h3
+        {
+            font-size:24px;
+        }
+    }
+.painel-conteudo
+{
+    color:#000;
+    background-color:#fff;
+    p
+    {
+        @include fontbase;
+        margin-left:10px;
+        &+p
+        {
+            margin-top: 20px;
+            color:#ddd;
+        }
+    }
+}
+}
